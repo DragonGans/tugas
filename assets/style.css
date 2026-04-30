@@ -1,228 +1,140 @@
 body {
   margin: 0;
+  font-family: Poppins, sans-serif;
 }
 
+/* container full */
 .container {
-  width: 1440px;
-  height: 1024px;
+  width: 100%;
+  height: 100vh;
+  background: #D8F2F3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
-  background: #D8F2F3;
   overflow: hidden;
-  font-family: Poppins;
 }
 
-/* Background */
-.bg-main {
-  width: 1486px;
-  height: 1080px;
-  left: -8px;
-  top: -44px;
+/* blur tetap */
+.blur-1,
+.blur-2,
+.blur-3 {
   position: absolute;
-  background: #D8F2F3;
-}
-
-.bg-overlay {
-  width: 1486px;
-  height: 1080px;
-  left: -8px;
-  top: -44px;
-  position: absolute;
-  opacity: 0.10;
-}
-
-/* Blur effect */
-.blur-1 {
-  width: 233px;
-  height: 247px;
-  left: 66px;
-  top: 63px;
-  position: absolute;
-  opacity: 0.2;
+  border-radius: 50%;
   background: #76999B;
-  border-radius: 9999px;
-  filter: blur(40px);
+  filter: blur(60px);
+  opacity: 0.2;
+}
+
+.blur-1 {
+  width: 200px;
+  height: 200px;
+  top: 10%;
+  left: 5%;
 }
 
 .blur-2 {
-  width: 292px;
-  height: 308px;
-  left: 1066px;
-  top: 565px;
-  position: absolute;
-  opacity: 0.15;
-  background: #76999B;
-  border-radius: 9999px;
-  filter: blur(50px);
+  width: 250px;
+  height: 250px;
+  bottom: 10%;
+  right: 5%;
 }
 
 .blur-3 {
-  width: 210px;
-  height: 222px;
-  left: 1044px;
-  top: 388px;
-  position: absolute;
-  opacity: 0.25;
-  background: #76999B;
-  border-radius: 9999px;
-  filter: blur(30px);
-}
-
-/* Card */
-.card {
-  width: 480px;
-  height: 550px;
-  left: 50%;
+  width: 180px;
+  height: 180px;
   top: 40%;
-  position: absolute;
-  background: white;
-  box-shadow: 0px 4px 4px 5px rgba(0,0,0,0.25);
-  border-radius: 25px;
+  right: 10%;
 }
 
-/* Text */
+/* card */
+.card {
+  width: 400px;
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0px 10px 30px rgba(0,0,0,0.1);
+
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+/* logo */
+.logo {
+  width: 120px;
+  margin-bottom: 10px;
+}
+
+/* text */
 .title {
-  left: 670px;
-  top: 260px;
-  position: absolute;
-  font-size: 32px;
+  font-size: 24px;
   font-weight: 600;
 }
 
 .subtitle {
-  left: 645px;
-  top: 320px;
-  position: absolute;
-  color: #636363;
-  font-size: 16px;
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
 }
 
-.label-username {
-  left: 560px;
-  top: 380px;
-  position: absolute;
+/* label */
+.label {
+  width: 100%;
   font-weight: 600;
+  font-size: 14px;
 }
 
-.label-password {
-  left: 560px;
-  top: 480px;
-  position: absolute;
-  font-weight: 600;
-}
-
-/* Input */
-.input {
-  position: absolute;
-  width: 416px;
-  height: 52px;
-}
-
-.username {
-  left: 560px;
-  top: 408px;
-}
-
-.password {
-  left: 560px;
-  top: 508px;
-}
-
+/* input */
 .input-box {
   width: 100%;
-  height: 100%;
-  border-radius: 12px;
+  height: 45px;
+  border-radius: 10px;
   border: 2px solid #76999B;
+  padding: 0 10px;
+  font-size: 14px;
 }
 
-.placeholder {
-  position: absolute;
-  left: 15px;
-  top: 14px;
-  color: #999;
-}
-
-/* Button */
+/* button */
 .btn {
-  width: 416px;
-  height: 51px;
-  left: 560px;
-  top: 600px;
-  position: absolute;
+  width: 100%;
+  height: 45px;
   background: #76999B;
-  border-radius: 16px;
-  box-shadow: 0px 4px 12px rgba(118,153,155,0.30);
-}
-
-.btn-text {
-  left: 730px;
-  top: 615px;
-  position: absolute;
+  border-radius: 12px;
   color: white;
-  font-size: 18px;
   font-weight: 600;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
 }
 
-/* Others */
+/* hover biar keren */
+.btn:hover {
+  opacity: 0.9;
+}
+
+/* forgot */
 .forgot {
-  left: 719px;
-  top: 660px;
-  position: absolute;
+  font-size: 13px;
   color: #76999B;
-  font-size: 14px;
+  cursor: pointer;
 }
 
-.footer-line {
-  width: 416px;
-  height: 47px;
-  left: 512px;
-  top: 775px;
-  position: absolute;
-  border-top: 2px solid #E5E5E5;
-}
-
-.footer-text {
-  left: 614px;
-  top: 801px;
-  position: absolute;
-  color: #636363;
-  font-size: 14px;
-}
-
-.logo {
-  width: 300px;
-  height: 200px;
-  left: 600px;
-  top: 100px;
-  position: absolute;
-}
-
-/* ===================================== */
-/* ✅ TAMBAHAN (JANGAN DIHAPUS) */
-/* ===================================== */
-
-html, body {
+/* footer */
+.footer {
   width: 100%;
-  height: 100%;
+  border-top: 1px solid #eee;
+  text-align: center;
+  font-size: 13px;
+  padding-top: 10px;
+  color: #666;
 }
 
-/* full layar */
-.container {
-  width: 100%;
-  height: 100vh;
-}
-
-/* center card */
-.card {
-  left: 50% !important;
-  top: 50% !important;
-  transform: translate(-50%, -50%);
-}
-
-/* responsive HP */
+/* responsive */
 @media (max-width: 768px) {
   .card {
-    width: 90% !important;
-    height: auto !important;
+    width: 90%;
     padding: 20px;
   }
 }
